@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.9
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'>
+<h1 id="label-Run+Length+Encoding">Run Length Encoding</h1>
+
+<p>Implement run-length encoding and decoding.</p>
+
+<p>Run-length encoding (RLE) is a simple form of data compression, where runs
+(consecutive data elements) are replaced by just one data value and count.</p>
+
+<p>For example we can represent the original 53 characters with only 13.</p>
+
+<pre class="code ruby"><code class="ruby">&quot;WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWB&quot;  -&gt;  &quot;12WB12W3B24WB&quot;</code></pre>
+
+<p>RLE allows the original data to be perfectly reconstructed from the
+compressed data, which makes it a lossless data compression.</p>
+
+<pre class="code ruby"><code class="ruby">&quot;AABCCCDEEEE&quot;  -&gt;  &quot;2AB3CD4E&quot;  -&gt;  &quot;AABCCCDEEEE&quot;</code></pre>
+
+<p>For simplicity, you can assume that the unencoded string will only contain
+the letters A through Z (either lower or upper case) and whitespace. This
+way data to be encoded will never contain any numbers and numbers inside
+data to be decoded always represent the count for the following character.</p>
+<hr>
+
+<p>For installation and learning resources, refer to the <a
+href="http://exercism.io/languages/ruby">exercism help page</a>.</p>
+
+<p>For running the tests provided, you will need the Minitest gem. Open a
+terminal window and run the following command to install minitest:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_minitest'>minitest</span>
+</code></pre>
+
+<p>If you would like color output, you can <code>require
+&#39;minitest/pride&#39;</code> in the test file, or note the alternative
+instruction, below, for running the test file.</p>
+
+<p>In order to run the test, you can run the test file from the exercise
+directory. For example, if the test suite is called
+<code>hello_world_test.rb</code>, you can run the following command:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_ruby'>ruby</span> <span class='id identifier rubyid_hello_world_test'>hello_world_test</span><span class='period'>.</span><span class='id identifier rubyid_rb'>rb</span>
+</code></pre>
+
+<p>To include color from the command line:</p>
+
+<pre class="code ruby"><code class="ruby">ruby -r minitest/pride hello_world_test.rb</code></pre>
+
+<h2 id="label-Source">Source</h2>
+
+<p>Wikipedia <a
+href="https://en.wikipedia.org/wiki/Run-length_encoding">en.wikipedia.org/wiki/Run-length_encoding</a></p>
+
+<h2 id="label-Submitting+Incomplete+Solutions">Submitting Incomplete Solutions</h2>
+
+<p>It&#39;s possible to submit an incomplete solution so you can see how
+others have completed the exercise.</p>
+</div></div>
+
+      <div id="footer">
+  Generated on Sun Oct 22 20:07:21 2017 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.9 (ruby-2.3.3).
+</div>
+
+    </div>
+  </body>
+</html>
