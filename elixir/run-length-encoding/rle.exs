@@ -25,22 +25,14 @@ defmodule RunLengthEncoder do
   def decode(string) do
     Regex.scan(~r/([0-9]*[A-Za-z ])/, string)
     |> Enum.map(&List.first/1)
-    |> Enum.map_join(&expander/1)
-  end
-
-  defp expander(str) do
-    cond do
-      String.length(str) == 1 -> str
-      true -> expand(str)
-    end
+    |> Enum.map_join(&expand/1)
   end
 
   defp expand(str) do
-    char = String.last(str)
-    number = String.slice(str,0,String.length(str) - 1)
+    {number,char} = String.split_at(str,-1)
     String.duplicate(char,to_int(number))
   end
 
-  defp to_int(""), do: ""
-  defp to_int(str), do: String.to_integer(str)
+  defp to_int(""), do: 1
+  defp to_int(str), do: str |> to_string |> String.to_integer
 end
