@@ -13,7 +13,7 @@ class Squares
   end
 
   def square_of_sum
-    (1..@limit).reduce(&:+)**2
+    (1..@limit).sum**2
   end
 
   def difference

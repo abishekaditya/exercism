@@ -11,7 +11,6 @@ defmodule Scrabble do
     |> Enum.sum
   end
 
-  defp value(_), do: 0
   defp value(char) when char in ~c{AEIOULNRST}, do: 1
   defp value(char) when char in ~c{DG},         do: 2
   defp value(char) when char in ~c{BCMP},       do: 3
@@ -19,4 +18,6 @@ defmodule Scrabble do
   defp value(char) when char in ~c{K},          do: 5
   defp value(char) when char in ~c{JX},         do: 8
   defp value(char) when char in ~c{QZ},         do: 10
+  defp value(_), do: 0
+
 end
